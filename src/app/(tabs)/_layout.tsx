@@ -5,13 +5,12 @@ export default function TabLayout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
         <Tabs.Screen
-          name="cadastro"
-          options={{
+        name="cadastro"
+        options={{
             title: 'Cadastro',
-            tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />,
-          }}
+            tabBarIcon: ({ color }) => <FontAwesome size={28} name="gitlab" color={color} />,
+        }}
         />
-
         <Tabs.Screen
         name="index"
         options={{

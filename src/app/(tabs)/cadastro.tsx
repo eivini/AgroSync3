@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Cadastro() {
+export default function Tab() {
   return (
     <View style={styles.container}>
-      <Text>Teste</Text>
+      <Text>Teste cadastro</Text>
     </View>
   );
 }
