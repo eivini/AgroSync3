@@ -1,21 +1,35 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text } from 'react-native';
+
+import cadastro from '../app/(tabs)/cadastro';
+import despesas from '../app/(tabs)/despesasFormulario';
+import relatorio from '../app/(tabs)/relatorio';
+import saude from '../app/(tabs)/saude/saude';
+
 
 const Tab = createBottomTabNavigator();
 
-const Screen = ({text}: {text: string}) => {
-    return (
-        <View>
-            <Text>{text}</Text>
-        </View>
-    )
-}
-
-function MyTabs() {
+export default function TabRoutes(){
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={() => <Screen text='homepage'/>} />
-      <Tab.Screen name="Settings" component={() => <Screen text='Settings'/>} />
+      <Tab.Screen 
+        name='cadastro'
+        component={cadastro}
+      />
+
+      <Tab.Screen 
+        name='despesas'
+        component={despesas}
+      />
+
+      <Tab.Screen 
+        name='relatorio'
+        component={relatorio}
+      />
+
+      <Tab.Screen 
+        name='saude'
+        component={saude}
+      />
     </Tab.Navigator>
-  );
+  )
 }
