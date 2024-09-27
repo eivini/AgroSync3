@@ -1,7 +1,6 @@
 export const colors = {
     green: {
-        700: "#15803d",
-        950: "#052e16"
+        base: '#1e3f34'
     },
     white: {
         figma: '#D9D9D9'

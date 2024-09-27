@@ -1,15 +1,15 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Button } from 'react-native';
 
 export default function App() {
-  return (
+   return (
     <View style={styles.container}>
       <Image source={require('../assets/logoAgroSync.jpg')} />
       <Text style={logo.text}>AgroSync</Text>
+      <Button title='Login' onPress={() => {}} />
       <Text style={logo.text}>Cadastro</Text>
     </View>
   );
 }
-
 
 const logo = StyleSheet.create({
     text: {
@@ -32,5 +32,8 @@ const styles = StyleSheet.create({
     color: '#FFFFF7',
     fontSize: 25,
     fontWeight: 'bold'
+  },
+  button: {
+
   }
 });
