@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function relatorio() {
+export default function Menu() {
   return (
     <View style={styles.container}>
-      <Text>Tab [Relatorio]</Text>
+      <Text> Cadastro e Menu aaaaaa </Text>
     </View>
   );
 }

@@ -1,3 +1,3 @@
-export default function saudeLayout() {
+export default function SaudeLayout() {
 
 }

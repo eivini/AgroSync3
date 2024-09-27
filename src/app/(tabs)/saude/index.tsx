@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function despesas() {
+export default function Saude() {
   return (
     <View style={styles.container}>
-      <Text>Tab [Despesas]</Text>
+      <Text> Saude aaaaaa </Text>
     </View>
   );
 }
