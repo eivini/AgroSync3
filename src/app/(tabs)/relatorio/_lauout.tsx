@@ -1,6 +1,6 @@
 import { Stack } from "expo-router";
 
-export default function MenuStack() {
+export default function RelatorioStack() {
     return (
         <Stack screenOptions={{headerShown: false,}}>
             <Stack.Screen name="index" />

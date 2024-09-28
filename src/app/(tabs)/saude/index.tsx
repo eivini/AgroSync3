@@ -1,17 +1,22 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View } from "react-native";
+import BotomSaude from "../../components/saude/botaoSaude";
+import Calendar from "../../components/saude/calendarioSaude";
 
-export default function Saude() {
-  return (
-    <View style={styles.container}>
-      <Text> Tab da Saude / Etc </Text>
-    </View>
-  );
+export default function saude() {
+    return (
+        <View
+            style={{
+                flex: 1,
+                backgroundColor: "#d7d7d7",
+                
+            }} 
+            
+        >
+            <View>
+                <Calendar/>
+                <BotomSaude titulo={"previsao"} rota={"Previsao"}/>
+                <BotomSaude titulo={"doentes"} rota={"Doentes"}/>
+            </View>
+        </View>    
+    )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

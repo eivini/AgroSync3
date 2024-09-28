@@ -1,62 +1,77 @@
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+import { StatusBar } from 'react-native'
 
 export default function App() {
+  function userLogin(){
+    console.log('você clicou no botão de login')
+  }
+
    return (
-    <View style={styles.container}>
-      <Image 
-        style={styles.image}
-        source={require('../assets/logoSemFundo.png')} 
+    <>
+      <StatusBar 
+        barStyle={'dark-content'}
+        backgroundColor='transparent'
+        translucent
       />
-      <Image 
-        style={styles.image}
-        source={require('../assets/loginMato.png')} 
-      />
-      <Text style={logo.text}>
-        AgroSync
-      </Text>
+      <View style={styles.container}>
+        <Image 
+          style={styles.image}
+          source={require('../assets/logoSemFundo.png')} 
+        />
 
-      <TextInput 
-        style={styles.input}
-        placeholder='Email'
-        placeholderTextColor={'#6B6B6B'}
-        keyboardType='email-address'
-        textAlign='center'
-      />
-
-      <TextInput 
-        style={styles.input}
-        placeholder='Senha'
-        placeholderTextColor={'#6B6B6B'}
-        secureTextEntry={true}
-        textAlign='center'
-      />
-
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>
-          Entrar
+        <Text style={styles.textLogin}>
+          AgroSync
         </Text>
-      </TouchableOpacity>
 
-    </View>
+        <View style={styles.login}>
+          
+          <TextInput 
+            style={styles.input}
+            placeholder='Email'
+            placeholderTextColor={'#6B6B6B'}
+            keyboardType='email-address'
+            textAlign='center'
+          />
+
+          <TextInput 
+            style={styles.input}
+            placeholder='Senha'
+            placeholderTextColor={'#6B6B6B'}
+            secureTextEntry={true}
+            textAlign='center'
+          />
+        </View>
+
+        <View style={styles.buttonLogin}>
+          <TouchableOpacity style={styles.button} onPress={userLogin}>
+            <Text style={styles.buttonText}>
+              Entrar
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+      </View>
+    </>
   );
 }
 
-const logo = StyleSheet.create({
-  text: {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1e3f34',
+    alignItems: 'center',
+  },
+  image: {
+    
+  },
+  login: {
+
+  },
+  textLogin: {
     color: '#FFF',
     fontSize: 35,
     fontWeight: 'bold',
-    top: '0%',
-    margin: 30,
-  }
-})
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: '0%',
-    backgroundColor: '#1e3f34',
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginBottom: 100,
   },
   text: {
     color: '#FFFFF7',
@@ -66,7 +81,7 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: '#1f1e25',
     height: 40,
-    width: 200,
+    width: 220,
     borderRadius: 15,
     color: '#FFF',
     padding: 10,
@@ -82,5 +97,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#31cf67',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  buttonLogin: {
+    width: 'auto',
+    marginTop: 10
   }
 });
