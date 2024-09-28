@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Saude() {
   return (
     <View style={styles.container}>
-      <Text> Saude aaaaaa </Text>
+      <Text> Tab da Saude / Etc </Text>
     </View>
   );
 }

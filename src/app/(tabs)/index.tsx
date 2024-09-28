@@ -1,9 +1,8 @@
-import Menu from "./menu";
-import Saude from "./saude";
+import { Redirect } from "expo-router";
 
-export default function App() {
-  return (
-    <Menu />
 
-  )
+export default function TabIndex() {
+  return <Redirect href={'/menu'} />;
+        
+  
 }

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Menu() {
   return (
     <View style={styles.container}>
-      <Text> Cadastro e Menu aaaaaa </Text>
+      <Text> Tab do Menu / Cadastro </Text>
     </View>
   );
 }

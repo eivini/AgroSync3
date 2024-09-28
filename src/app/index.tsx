@@ -1,11 +1,15 @@
-import { View, Text, StyleSheet, Image, Button, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 export default function App() {
    return (
     <View style={styles.container}>
       <Image 
-        style={logo.container}
-        source={require('../assets/logoAgroSync.jpg')} 
+        style={styles.image}
+        source={require('../assets/logoSemFundo.png')} 
+      />
+      <Image 
+        style={styles.image}
+        source={require('../assets/loginMato.png')} 
       />
       <Text style={logo.text}>
         AgroSync
@@ -16,6 +20,14 @@ export default function App() {
         placeholder='Email'
         placeholderTextColor={'#6B6B6B'}
         keyboardType='email-address'
+        textAlign='center'
+      />
+
+      <TextInput 
+        style={styles.input}
+        placeholder='Senha'
+        placeholderTextColor={'#6B6B6B'}
+        secureTextEntry={true}
         textAlign='center'
       />
 
@@ -30,24 +42,18 @@ export default function App() {
 }
 
 const logo = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#1e3f34',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    text: {
-        flex: 1,
-        color: '#FFF',
-        fontSize: 25,
-        fontWeight: 'bold',
-        top: '0%'
-    }
+  text: {
+    color: '#FFF',
+    fontSize: 35,
+    fontWeight: 'bold',
+    top: '0%',
+    margin: 30,
+  }
 })
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    marginTop: '0%',
     backgroundColor: '#1e3f34',
     justifyContent: 'center',
     alignItems: 'center',
@@ -64,10 +70,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     color: '#FFF',
     padding: 10,
+    marginBottom: 5,
   },
   buttonText: {
     color: '#FFF',
-
   },
   button: {
     width: 80,
