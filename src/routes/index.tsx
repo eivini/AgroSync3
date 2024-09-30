@@ -1,12 +1,10 @@
-import { NavigationContainer } from "@react-navigation/native";
-import TabRoutes from "./routes";
-import { StatusBar } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { AppRoutes } from './app.routes';
 
-export default function Routes() {
+export function Routes() {
     return (
-        <NavigationContainer>
-            <StatusBar />
-            <TabRoutes />
+        <NavigationContainer  independent={true}>
+            <AppRoutes />
         </NavigationContainer>
-    )
+    );
 }

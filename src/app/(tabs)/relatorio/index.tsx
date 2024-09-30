@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Relatorio() {
   return (
     <View style={styles.container}>
-      <Text> Tab do Relatorio </Text>
+      <Text> Tab dos Relatorios </Text>
     </View>
   );
 }

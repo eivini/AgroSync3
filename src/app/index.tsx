@@ -43,7 +43,10 @@ export default function App() {
         </View>
 
         <View style={styles.buttonLogin}>
-          <TouchableOpacity style={styles.button} onPress={userLogin}>
+          <TouchableOpacity 
+            style={styles.button} 
+            onPress={userLogin}
+          >
             <Text style={styles.buttonText}>
               Entrar
             </Text>
