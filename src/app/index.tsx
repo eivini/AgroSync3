@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'react-native'
 
@@ -7,7 +8,7 @@ export default function App() {
   }
 
    return (
-    <>
+    <View style={styles.container}>
       <StatusBar 
         barStyle={'dark-content'}
         backgroundColor='transparent'
@@ -51,10 +52,11 @@ export default function App() {
               Entrar
             </Text>
           </TouchableOpacity>
+          <Link href={'/(tabs)'}>Tabs</Link>
         </View>
 
       </View>
-    </>
+    </View>
   );
 }
 
