@@ -2,18 +2,19 @@ import { Link } from 'expo-router';
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'react-native'
 
-export default function App() {
+export default function Login() {
   function userLogin(){
     console.log('você clicou no botão de login')
   }
 
    return (
-    <View style={styles.container}>
+    <>
       <StatusBar 
         barStyle={'dark-content'}
         backgroundColor='transparent'
         translucent
       />
+    <View style={styles.container}>
       <View style={styles.container}>
         <Image 
           style={styles.image}
@@ -57,6 +58,7 @@ export default function App() {
 
       </View>
     </View>
+    </>
   );
 }
 
